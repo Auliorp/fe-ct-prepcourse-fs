@@ -43,22 +43,22 @@ function mayorQueCincuenta(num) {
    // Retorna true si el argumento "num" es mayor que cincuenta.
    // De lo contrario, retorna false.
    // Tu código:
-   return num > 50;
-
+   return (num > 50) ? true : false;
+   
 }
 
 function esPar(num) {
    // Retorna true si "num" es par.
    // De lo contrario, retorna false.
    // Tu código:
-   return num % 2 == 0
+   return (num % 2 === 0) ? true : false;
 }
 
 function esImpar(num) {
    // Retorna true si "num" es impar.
    // De lo contrario, retorna false.
    // Tu código:
-   return num % 3 == 1
+   return (num % 3 == 1) ? true : false;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

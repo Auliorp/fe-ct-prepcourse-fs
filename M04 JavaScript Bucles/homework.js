@@ -16,10 +16,8 @@ function mayoriaDeEdad(edad) {
    // Tu código:
    if (edad >= 18){
       return "Allowed"
-   }
-   else if (edad < 18){
-      return "Not allowed"
-   }
+   }else
+   return "Not allowed";
 }
 
 function conection(status) {
@@ -153,10 +151,10 @@ function operadoresLogicos(num1, num2, num3) {
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
 
-   if (num1 < 0 || num2 < 0 || num3 < 0) return "Hay negativos";
-   else if (num1 === 0 || num2 === 0 || num3 === 0) return "Error";
+   if (num1 < 0 || num2 < 0 || num3 < 0) return "Hay negativos"
+   else if (num1 === 0 || num2 === 0 || num3 === 0) return "Error"
    else if (num3 > num1 && num2) return num3 + 1;
-   else if (num1 > num2 && num3) return "Numero 1 es mayor y positivo";
+   else if (num1 > num2 && num3) return "Numero 1 es mayor y positivo"
    else return false;
 }
 
@@ -167,15 +165,16 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-  if (num < 2){
-   return false;
-  }
-  for (let i = 2; i < num; i++){
-   if (num % i === 0){
+ 
+    if (num < 2){
+    return false;
+    }
+    for (let i = 2; i < num; i++){
+    if (num % i === 0){
       return false;
    }
-  }
-  return true;
+}
+return true;
 }
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
@@ -193,12 +192,8 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if (num >= 100 && num < 1000){
-      return true;
-   }
-   else{
-      return false;
-   }
+  if (num >= 100 && num < 1000) return true;
+  else return false;
 }
 
 function doWhile(num) {
@@ -206,14 +201,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let i = 5;
-   let resultado = 0;
-   do{
-      i = i - 1
-      resultado = num + 40;
-   }
-   while (i < 0);
-   return resultado;
+let valorAcual = num;
+let contador = 0;
+do {
+   valorAcual += 5;
+   contador++;
+}
+while(valorAcual <= num + 35 && contador < 8);
+return valorAcual; 
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
