@@ -6,6 +6,8 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+   
+   
 }
 
 function numberOfCharacters(string) {
@@ -14,6 +16,13 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+   let splitString = string.split("");
+   let ordenAlfabeto = splitString.sort();
+   let cantidadString = {};
+    ordenAlfabeto.forEach((item) => {
+      cantidadString[item] = ordenAlfabeto.filter((e) => e === item).length;
+    });
+    return cantidadString;
 }
 
 function capToFront(string) {
@@ -22,6 +31,12 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   let cambio = string.split("");
+   let mayúscula = cambio.filter(e => e === e.toUpperCase());
+   let minuscula = cambio.filter(e => e === e.toLowerCase());
+   mayúscula = mayúscula.join("");
+   minuscula = minuscula.join("");
+   return (mayúscula + minuscula);
 }
 
 function asAmirror(frase) {
@@ -29,12 +44,23 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
-}
-
+   let seleccion = frase.split(" ");
+   let bloqueReversa = seleccion.map(((el) => el.split("").reverse().join("")));
+   let nuevoBloque = bloqueReversa.join(" ");
+   return nuevoBloque;
+};
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+
+   let cadena = numero.toString();
+   let capicuaInverso = cadena.split("").reverse().join("");
+   if (cadena === capicuaInverso){
+      return "Es capicua";
+   }else {
+      return "No es capicua";
+   }
 }
 
 function deleteAbc(string) {

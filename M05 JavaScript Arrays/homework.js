@@ -22,18 +22,18 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-   let masUno = array.map((array) => {
-      return array + 1;
+   let sumando1 = array.map((array) => {
+      return array + 1
    });
-   return masUno;
+   return sumando1;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-  array.push(elemento);
-  return array;
+ array.push(elemento);
+ return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -50,8 +50,7 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-  return palabras.join(" ")
-   
+   return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
@@ -78,7 +77,7 @@ function promedioResultadosTest(resultadosTest) {
    // Tu código:
    let notas = 0;
    for (let i = 0; i < resultadosTest.length; i++){
-      notas = notas + resultadosTest[i] 
+      notas += resultadosTest[i] 
    }
    return notas / resultadosTest.length 
 }
@@ -139,20 +138,13 @@ function diaDeLaSemana(numeroDeDia) {
         dias = "Es fin de semana";
          break;
       case 2:
-        dias = "Es dia laboral";
-         break;
       case 3:
-        dias = "Es dia laboral";
-         break;
       case 4:
-        dias = "Es dia laboral";
-         break;
       case 5:
-        dias = "Es dia laboral";
-         break;
       case 6:
         dias = "Es dia laboral";
          break;
+      
       case 7:
         dias = "Es fin de semana";
          break;
