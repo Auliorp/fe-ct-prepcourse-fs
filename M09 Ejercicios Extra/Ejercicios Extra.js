@@ -6,22 +6,20 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
-   
-   
 }
 
 function numberOfCharacters(string) {
    // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
    // letras del string, y su valor es la cantidad de veces que se repite en el string.
    // Las letras deben estar en orden alfabético.
-   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
+   // [EJEMPLO]: "adjsfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
-   let splitString = string.split("");
-   let ordenAlfabeto = splitString.sort();
+   let splitString = string.split("").sort();
    let cantidadString = {};
-    ordenAlfabeto.forEach((item) => {
-      cantidadString[item] = ordenAlfabeto.filter((e) => e === item).length;
-    });
+    splitString.forEach((item) => {
+      cantidadString[item] = splitString.filter((e) => e === item).length;
+    }); 
+    console.log(cantidadString);
     return cantidadString;
 }
 
@@ -67,6 +65,7 @@ function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   return string.replace(/[abc]/g, "");
 }
 
 function sortArray(arrayOfStrings) {
@@ -75,6 +74,8 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   return arrayOfStrings.sort((current, next) => current.length - next.length);
+  
 }
 
 function buscoInterseccion(array1, array2) {
