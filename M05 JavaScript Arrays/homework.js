@@ -75,8 +75,9 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+
    let sum = 0;
-   for (let i = 0;i < resultadosTest.length; i++){
+   for (let i = 0; i < resultadosTest.length; i++){
       sum += resultadosTest[i];
    }
    let average = sum / resultadosTest.length;
